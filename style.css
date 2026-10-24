@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #17051f, #580b32, #160b2b);
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 35px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 35px rgba(255, 30, 100, 0.2);
+}
+
+.heart {
+    font-size: 90px;
+    margin-bottom: 20px;
+    animation: beat 1s infinite;
+}
+
+h1 {
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 25px;
+    background: #ff3f78;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff165c;
+    transform: scale(1.05);
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}#letter {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    animation: appear 0.6s ease;
+}
+
+#letter[hidden] {
+    display: none;
+}
+
+#letter h2 {
+    margin-bottom: 15px;
+    color: #ff9fbe;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}.my-photo {
+    display: block;
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ff9fbe;
+    box-shadow: 0 0 25px rgba(255, 63, 120, 0.6);
+    margin: 10px auto 25px;
+    animation: photoAppear 1s ease both;
+}
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}/* قلب‌های شناور */
+#floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* درخشش نامه */
+#letter {
+    animation: letterGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes letterGlow {
+    from {
+        box-shadow: 0 0 10px #ff6b9d;
+    }
+    to {
+        box-shadow: 0 0 30px #ff1493;
+    }
+}
+
+/* سورپرایز مخفی */
+.surprise-box {
+    margin-top: 25px;
+}
+
+#surpriseMessage {
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background: rgba(255, 105, 180, 0.15);
+    color: white;
+    line-height: 2;
+    animation: letterGlow 2s infinite alternate;
+}
+
+#surpriseButton {
+    background: linear-gradient(45deg, #ff1493, #a855f7);
+}/* درخشش زیبای نامه */
+#letter {
+    animation: letterGlow 2s ease-in-out infinite alternate;
+    border-radius: 20px;
+}
+
+@keyframes letterGlow {
+    from {
+        box-shadow: 0 0 10px #ff6b9d;
+    }
+
+    to {
+        box-shadow: 0 0 30px #ff1493, 0 0 45px #ff69b4;
+    }
+}
+
+/* دکمه سورپرایز */
+#surpriseButton {
+    background: linear-gradient(45deg, #ff1493, #a855f7);
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#surpriseButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff69b4;
+}/* انیمیشن بازشدن نامه */
+#letter:not([hidden]) {
+    animation: letterOpen 0.8s ease-out,
+               letterGlow 2s ease-in-out infinite alternate;
+    transform-origin: top center;
+}
+
+@keyframes letterOpen {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}/* ظاهرشدن ویژه پیام سورپرایز */
+#surpriseMessage:not([hidden]) {
+    animation: surpriseAppear 1s ease-out;
+    border: 1px solid rgba(255, 105, 180, 0.7);
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+}
+
+@keyframes surpriseAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(20px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

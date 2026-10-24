@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>یک سورپرایز برای تو ❤️</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="floating-hearts"></div>
+
+    <div class="container">
+        <div class="heart">❤️</div>
+        <div class="container">
+    <div class="heart">❤️</div>
+
+    <img src="./myphoto.jpg" alt="عکس من" class="my-photo">
+
+    <h1>سلام، آدم خاص زندگی من</h1>
+
+        <h1>سلام، آدم خاص زندگی من</h1>
+
+        <p>یک سورپرایز کوچک و قشنگ برای تو آماده کرده‌ام...</p>
+
+        <button id="openLetter">نامه‌ات را باز کن 💌</button>
+<div id="letter" hidden>
+    <h2>برای تو، آدم خاص من ❤️🌹</h2>
+
+    <p>
+        راستش را بخواهی، نمی‌دانم چطور باید شروع کنم؛
+        چون بعضی احساس‌ها را نمی‌شود به‌آسانی در چند جمله جا داد.
+        اما دلم خواست به‌جای این‌که فقط حرف بزنم،
+        چیزی برایت بسازم؛ چیزی که بدانی با فکر تو ساخته شده است. 💌
+    </p>
+
+    <p>
+        بعضی آدم‌ها بدون آن‌که خودشان متوجه شوند،
+        در میان روزهای عادی آدم جای خاصی پیدا می‌کنند.
+        حرف‌زدن با آن‌ها حال آدم را بهتر می‌کند،
+        پیام‌شان لبخند می‌آورد و یک گفت‌وگوی ساده
+        می‌تواند به یکی از قشنگ‌ترین لحظه‌های روز تبدیل شود. ❤️
+    </p>
+
+    <p>
+        برای من، قشنگی تو فقط در حرف‌هایی نیست که می‌زنی؛
+        در احساسی است که از صحبت‌کردن با تو می‌گیرم.
+        گاهی یک جملهٔ ساده از تو می‌تواند مدت‌ها در ذهنم بماند
+        و بی‌اختیار لبخند به لبم بیاورد.
+    </p>
+
+    <p>
+        شاید همیشه نتوانم بهترین جمله‌ها را پیدا کنم،
+        اما وقتی برایت وقت می‌گذارم، از روی اجبار نیست.
+        خودم می‌خواهم؛ چون خوشحال‌کردنت برایم ارزش دارد. 🌷
+    </p>
+
+    <p>
+        دوست دارم بیشتر با تو حرف بزنم،
+        بیشتر بشناسمت و لحظه‌های قشنگ‌تری بسازیم.
+        نه با عجله و نه با اجبار؛
+        فقط با صداقت، احترام و احساس واقعی.
+    </p>
+
+    <p>
+        نمی‌خواهم با این حرف‌ها تو را مجبور به هیچ احساسی کنم.
+        دوست دارم اگر روزی احساسی میان ما شکل گرفت،
+        از شناختن یکدیگر و از صمیمیت واقعی باشد.
+    </p>
+
+    <p>
+        و اگر روزی از خودت پرسیدی چرا برایت چنین چیزی ساختم،
+        جوابش ساده است:
+        چون دلم خواست بدون مناسبت خاصی،
+        فقط به‌خاطر خودت، کاری انجام بدهم که لبخند بزنی. 🥹❤️
+    </p>
+
+    <p>
+        <strong>یک اعتراف کوچک...</strong>
+    </p>
+
+    <p>
+        از این‌که تو را شناخته‌ام خوشحالم.
+        شاید هنوز هزاران حرف نگفته داشته باشم،
+        اما فعلاً همین را می‌گویم:
+        حضورت برایم قشنگ است و دوست دارم
+        بیشتر با تو آشنا شوم. 🌹
+    </p>
+
+    <p>
+        بعضی حرف‌ها را نمی‌شود با هدیه گفت؛
+        برای همین، این بار با چند خط کد برایت نوشتم‌شان. ❤️💌
+    </p>
+
+    <h2>با بهترین آرزوها، برای تو ❤️</h2>
+
+    <button id="closeLetter">بستن نامه 💌</button>
+</div>
+<div class="surprise-box">
+    <button id="surpriseButton">سورپرایز مخفی 🎁</button>
+    <p id="surpriseMessage" hidden>
+        ✨ بعضی آدم‌ها بدون آن‌که بدانند، روز آدم را قشنگ‌تر می‌کنند.
+        خوشحالم که تو را شناخته‌ام! ❤️🌹
+    </p>
+</div>
+           
+
+    <script>
+        const openButton = document.getElementById("openLetter");
+        const closeButton = document.getElementById("closeLetter");
+        const letter = document.getElementById("letter");
+
+        openButton.addEventListener("click", function () {
+            letter.hidden = false;
+            openButton.hidden = true;
+        });
+
+        closeButton.addEventListener("click", function () {
+            letter.hidden = true;
+            openButton.hidden = false;
+        });
+    </script>
+
+
+</body><script>
+const heartsArea = document.getElementById("floating-hearts");
+
+function createHeart() {
+    const heart = document.createElement("span");
+    heart.className = "floating-heart";
+    heart.textContent = ["❤️", "💗", "💕", "💖"][Math.floor(Math.random() * 4)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    heartsArea.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 600);
+
+/* دکمه سورپرایز */
+surpriseButton.addEventListener("click", function () {
+    surpriseMessage.hidden = !surpriseMessage.hidden;
+
+    if (!surpriseMessage.hidden) {
+        for (let i = 0; i < 25; i++) {
+            setTimeout(createHeart, i * 100);
+        }
+    }
+
+    surpriseButton.textContent = surpriseMessage.hidden
+        ? "سورپرایز مخفی 🎁"
+        : "یک پیام قشنگ برایت ❤️";
+});
+</script>
+</html>
